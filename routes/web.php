@@ -18,7 +18,7 @@ Route::get('/about', function () {
     //1. return view('about')->with('name', '$name');
     //2. return view('about', data: ['name' => $name]);
     //3.
-    return view('about', data: compact('name', 'departments'));
+    return view('about', compact('name', 'departments'));
 
 });
 
@@ -29,7 +29,7 @@ Route::post('/about', function () {
         '2'=>'Financial',
         '3'=>'Sales'
     ];
-    return view('about', data:compact('name'));
+    return view('about', compact('name'));
 });
 
 // Task Routes

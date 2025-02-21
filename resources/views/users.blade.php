@@ -37,19 +37,16 @@
                         <form action="{{ url('update') }}" method="POST">
                             @csrf
                             <input type="hidden" name="id" value="{{ $user->id }}">
-
                             <!-- User Name -->
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" name="name" class="form-control" value="{{ $user->name ?? '' }}">
+                                <input type="text" name="name" class="form-control" value="{{ $user->name}}">
                             </div>
-
                             <!-- User Email -->
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" name="email" class="form-control" value="{{ $user->email ?? '' }}">
+                                <input type="email" name="email" class="form-control" value="{{ $user->email}}">
                             </div>
-
                             <!-- User Password -->
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
@@ -71,28 +68,25 @@
                         <!-- New User Form -->
                         <form action="create" method="POST">
                             @csrf
-                            <!-- Task Name -->
+                            <!-- User Name -->
                             <div class="mb-3">
                                 <label for="name" class="form-label">User</label>
                                 <input type="text" name="name" id="name" class="form-control" value="">
                             </div>
-
                             <!-- User Email -->
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" name="email" class="form-control" value="{{ $user->email ?? '' }}">
+                                <input type="email" name="email" class="form-control" value="{{ $user->email }}">
                             </div>
-
                             <!-- User Password -->
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
                                 <input type="password" name="password" class="form-control">
                             </div>
-
                             <!-- Add User Button -->
                             <div>
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-plus me-2"></i>Add Task
+                                    <i class="fa fa-plus me-2"></i>Add User
                                 </button>
                             </div>
                         </form>
