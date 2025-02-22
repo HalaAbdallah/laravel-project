@@ -13,7 +13,7 @@ class UserController extends Controller
         // Fetch all users from the database
         $users = DB::table('users')->get();
         // Return the view with the users data
-        return view('users', data: compact('users'));
+        return view('users', compact('users'));
     }
 
     // Store a new user
